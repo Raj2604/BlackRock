@@ -1,42 +1,55 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;&display=swap');
+@import './components/Navbar.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding-top: 4rem; /* Adjust this to the height of your navbar */
+  background: #0a0e00;
+}
+
+.form-container {
+  width: 1000px;
+  margin: auto;
+}
+
+.title,
+.slogan {
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.btn {
+  width: 100%;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-image {
+  padding-left: 4.6rem;
+  width: 75%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.alert {
+  margin-bottom: 1.5rem;
 }
 
-.card {
-  padding: 2em;
+.profile-card {
+  width: 500px;
+  margin: auto;
 }
 
-.read-the-docs {
-  color: #888;
+.avatar {
+  margin-bottom: 1.5rem;
+}
+
+.username {
+  text-transform: capitalize;
+}
+
+.profile-btn {
+  margin-top: 1.3rem;
+  width: 100%;
 }
