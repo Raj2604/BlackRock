@@ -7,9 +7,10 @@
 
 /* Global styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', 'sans-serif';
     line-height: 1.6;
-    background-color: #fcfdff; /* Adjust background color as needed */
+    background: url('../assets/bg.jpg') no-repeat center center fixed; /* Add background image */
+    background-size: cover; /* Ensure the image covers the entire background */
 }
 
 .container {
@@ -18,148 +19,179 @@ body {
     padding: 0 20px;
 }
 
-.navbar {
-    background-color: #fbfdfd; /* Navbar background color */
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000; /* Ensure it's above other content */
-}
+/* Navbar styles included in navbar.css */
 
-.navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar-logo {
-    font-size: 1.5rem;
-}
-
-.navbar-links a {
-    margin-left: 20px;
-    color: #333; /* Link color */
-    text-decoration: none;
-    font-weight: 500;
-}
-
+/* Hero section */
 .hero {
     background-size: cover;
     background-position: center;
     color: #fff; /* Text color on hero section */
     padding: 150px 0;
     text-align: center;
+    animation: fadeIn 1s ease-in; /* Add fade-in animation */
+    border-bottom: 1px solid #000; /* Add bottom border */
+    margin-top: 60px; /* Adjust margin to separate from navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.hero-left, .hero-right {
+    flex: 1; /* Take up 50% width */
+    max-width: 50%; /* Ensure it doesn't exceed 50% of the container */
+}
+
+.hero-left {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+}
+
+.hero-left .hero-image {
+    max-width: 100%; /* Make sure the image doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.hero-right {
+    padding: 0 40px; /* Adjust padding as needed */
+    text-align: left;
+}
+
+.hero .hero-text {
+    padding: 0 20px; /* Adjust padding for text */
 }
 
 .hero h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
+    transition: transform 0.3s; /* Add transition for transform */
+}
+
+.hero h1:hover, .hero p:hover, .about-section h2:hover, .about-section p:hover, .contact-section h2:hover, .contact-section p:hover, .questions-section h2:hover, .questions-section p:hover {
+    transform: scale(1.05); /* Slightly enlarge text on hover */
+    font-weight: bold; /* Make text bold on hover */
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    transition: transform 0.3s; /* Add transition for transform */
 }
 
 .btn {
     display: inline-block;
-    padding: 12px 30px;
-    background-color: #007bff; /* Button background color */
-    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    background-color: #28a745; /* Button background color */
+    color: white; /* Button text color */
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s; /* Add transition for button background and transform */
+    text-align: center;
+    width: 200px; /* Adjust width to be smaller */
+    height: 50px; /* Adjust height */
+}
+
+.btn-primary {
+    background-color: #28a745; /* Primary button background color */
+}
+
+.btn-secondary {
+    background-color: #6c757d; /* Secondary button background color */
 }
 
 .btn:hover {
-    background-color: #0056b3; /* Button hover background color */
+    background-color: #218838; /* Button hover background color */
+    color: white;
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
-.background-image-section {
-    width: 100%;
-    height: auto;
-    position: relative;
-    text-align: center;
-    /* padding: 50px 0; Adjust padding as needed */
-}
-
-.landing-background-image {
-    width: 100%;
-    height: auto;
-}
-
-.landing-overlay-image {
-    position: absolute;
-    top: 2%;
-    left: 18%;
-    width: 1100px; /* Adjust as needed */
-    height: 900px; /* Adjust as needed */
-    /* transform: translate(-50%, -50%); */
-    max-width: 100%;
-}
-
-.features-section {
+.features-section, .about-section, .contact-section, .questions-section {
     padding: 100px 0;
     text-align: center;
+    border-bottom: 1px solid #000; /* Add bottom border */
+    margin-top: 20px; /* Adjust margin to separate from previous section */
 }
 
-.features-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-}
-
-.features-section p {
-    font-size: 1.1rem;
-    color: #666; /* Feature description color */
-    margin-bottom: 20px;
+.features-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Ensure columns stretch to the same height */
 }
 
 .feature {
     margin-bottom: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Ensure content flows properly */
+    align-items: center; /* Center content vertically */
+    transition: transform 0.3s; /* Add transition for transform */
 }
 
-.about-section {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.about-section h2 {
+.feature h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    transition: transform 0.3s; /* Add transition for transform */
 }
 
-.contact-section {
-    padding: 100px 0;
-    text-align: center;
+.feature p {
+    font-size: 1.1rem;
+    color: #666; /* Feature description color */
+    margin-bottom: 20px;
+    transition: transform 0.3s; /* Add transition for transform */
 }
 
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.feature-rule {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 2px;
+    background-color: #000;
 }
 
-.questions-section {
-    padding: 100px 0;
-    text-align: center;
-}
-
-.questions-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
+.feature:hover {
+    transform: translateY(-5px); /* Move feature up on hover */
 }
 
 .footer {
-    background-color: #f8f9fa; /* Footer background color */
     padding: 20px 0;
     text-align: center;
+    margin-top: 20px; /* Adjust margin to separate from previous section */
 }
 
 .footer p {
-    font-size: 1rem;
-    color: #666; /* Footer text color */
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.education-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin-top for spacing */
+}
+
+.education-button {
+    background-color: #28a745; /* Orange background color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s; /* Add transition for button background and transform */
+    text-align: center;
+}
+
+.education-button:hover {
+    background-color: #36AD06; /* Darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
 }
 
 /* Chatbot button */
@@ -167,26 +199,42 @@ body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #28a745;
+    color: white;
     padding: 10px 20px;
     border-radius: 50%;
     text-decoration: none;
     z-index: 1000;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, width 0.3s, padding 0.3s; /* Add width and padding transitions */
     font-size: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 60px;
     height: 60px;
+    overflow: hidden; /* Hide the text initially */
+    white-space: nowrap; /* Prevent text wrapping */
 }
 
 .chatbot-button:hover {
-    background-color: #0056b3;
+    background-color: #28a745;
+    color: white;
+    width: 200px; /* Increase the width on hover */
+    padding: 10px 20px; /* Adjust padding on hover */
 }
 
 .chatbot-button::before {
     content: '🤖';
     font-size: 24px;
+    margin-right: 10px; /* Add space between the emoji and text */
+    padding-left: 9px;
+}
+
+.chatbot-button:hover::before {
+    content: '🤖 Chat with our bot'; /* Change content on hover */
+    font-size: 18px; /* Adjust font size for the combined text */
+}
+.logo{
+    width: 400px;
+    cursor: pointer; 
 }

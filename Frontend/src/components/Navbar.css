@@ -1,50 +1,79 @@
-/* Navbar.css */
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .navbar {
-    background-color: #ffffff;
-    padding: 10px 20px;
+    background-color: #333; /* Dark color */
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+
+.navbar.scrolled {
+    background-color: #fff; /* Navbar background color when scrolled */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-left {
-    display: flex;
-    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .navbar-logo {
     font-size: 1.5rem;
-}
-
-.navbar-right {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-links {
-    display: flex;
-    align-items: center;
+    font-weight: bold;
+    color: #333; /* Logo color */
 }
 
 .navbar-links a {
-    margin-left: 20px;
-    color: #333;
+    border-radius: 50%; /* Makes the links circular */
+    margin-left: 40px;
+    color: #94EBEE; /* Default link color */
     text-decoration: none;
     font-weight: 500;
+    transition: color 0.3s; /* Smooth transition for link color change */
+    padding: 10px; /* Add padding for better click area */
+    display: inline-block; /* Ensures circular shape */
+    line-height: 1; /* Centers text vertically */
+}
+
+.navbar-links a:hover {
+    color: black; /* Link color on hover */
 }
 
 .navbar-links button {
     margin-left: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
+    padding: 5px 10px;
+    background-color: #218838; /* Button background color */
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for button background and transform */
 }
 
 .navbar-links button:hover {
-    background-color: #0056b3;
+    background-color: #8CDE6B; /* Button background color on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.logo{
+    width: 160px;
+    cursor: pointer;
+
+}
+.subodh{
+    background-color: #218838;
 }

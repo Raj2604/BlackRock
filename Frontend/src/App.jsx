@@ -7,7 +7,13 @@ import Dashboard from './pages/Dashboard';
 import { useAuth } from './contexts/AuthContext';
 import Navbar from './components/Navbar';
 import LandingPage from './components/LandingPage';
-import Chatbot from './components/Chatbot'; // Import your Chatbot component
+import Chatbot from './components/Chatbot';
+import Report from './components/Report';
+import ReportResult from './components/ReportResult';
+import Portfolio from './components/Portfolio';
+import Results from './components/Results';
+import Edu from './components/Edu';
+import NewPortfolio from './components/NewPortfolio';
 
 const App = () => {
     const { isAuthenticated } = useAuth();
@@ -16,11 +22,17 @@ const App = () => {
         <Router>
             <Navbar />
             <Routes>
-                <Route path="/" element={!isAuthenticated ? <LandingPage /> : <Navigate to="/dashboard" />} />
-                <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/dashboard" />} />
-                <Route path="/register" element={!isAuthenticated ? <Register /> : <Navigate to="/dashboard" />} />
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/login" element={!isAuthenticated ? <Login /> : <Navigate to="/" />} />
+                <Route path="/register" element={!isAuthenticated ? <Register /> : <Navigate to="/login" />} />
                 <Route path="/dashboard" element={isAuthenticated ? <Dashboard /> : <Navigate to="/login" />} />
-                <Route path="/chatbot" element={<Chatbot />} /> {/* Add route for Chatbot */}
+                <Route path="/chatbot" element={<Chatbot />} />
+                <Route path="/report" element={isAuthenticated ? <Report /> : <Navigate to="/login" />} />
+                <Route path="/report/result/:company" element={<ReportResult />} />
+                <Route path="/portfolio" element={isAuthenticated ? <Portfolio /> : <Navigate to="/login" />} />
+                <Route path="/results" element={<Results />} />
+                <Route path="/edu" element={<Edu />} />
+                <Route path="/newportfolio" element={<NewPortfolio />} />
             </Routes>
         </Router>
     );

@@ -1,0 +1,208 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Portfolio container */
+.portfolio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Upper part */
+.upper-part {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.upper-part h1 {
+    font-size: 2rem;
+}
+
+/* Middle part */
+.middle-part {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Left and right sides */
+.left-side, .right-side {
+    width: 48%;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Left side */
+.left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Right side */
+.right-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Search box */
+.search-box, .bucket-input {
+    width: 100%;
+    max-width: 300px;
+    padding: 0.8rem;
+    margin-bottom: 0.1rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box::placeholder, .bucket-input::placeholder {
+    color: #adb5bd;
+}
+
+/* Suggestions list */
+.suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1rem 0;
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.suggestion-item {
+    padding: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+    background-color: #49c86d;
+}
+
+/* Create bucket button */
+.create-bucket-btn, .show-bucket-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.create-bucket-btn {
+    background-color: #218838;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.create-bucket-btn:hover {
+    background-color: #8CDE6B;
+}
+
+.show-bucket-btn {
+    background-color: #28a745;
+    color: #fff;
+    margin-top: 1rem;
+}
+.show-bucket-btn2 {
+    background-color: #218838;
+    color: #fff;
+    padding: 0.4rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+.show-bucket-btn2 :hover{
+    background-color: #8CDE6B;
+}
+
+
+/* Bucket section */
+.bucket-section {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Selected companies */
+.selected-companies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.selected-company {
+    background-color: #6c757d;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+}
+
+.selected-company .remove-company-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin-left: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.selected-company .remove-company-btn:hover {
+    transform: scale(1.2);
+}
+
+/* Lower part */
+.lower-part {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+/* Finish button */
+.finish-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.finish-btn:hover {
+    background-color: #c82333;
+}

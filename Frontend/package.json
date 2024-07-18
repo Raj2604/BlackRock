@@ -18,6 +18,8 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "antd": "^5.19.2",
     "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-markdown": "^9.0.1",

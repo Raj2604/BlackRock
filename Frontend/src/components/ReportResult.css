@@ -1,0 +1,115 @@
+.loading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+    background: url('../assets/bg.jpg') no-repeat center center;
+  }
+  
+  /* Spinner styles */
+  .spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #007bff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Loading text styles */
+  .loading-text {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #007bff;
+  }
+  
+  /* Spinner animation */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    min-height: 100vh;
+    background: url('../assets/bg.jpg') no-repeat center center;
+  }
+  
+  .company-name {
+    font-size: 2.5rem; /* Increased font size */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .result-table {
+    width: 90%; /* Increased width */
+    max-width: 800px; /* Increased max-width */
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 1.1rem; /* Increased font size */
+    margin-top: 20px; /* Added margin to separate from company name */
+  }
+  
+  .result-table th,
+  .result-table td {
+    padding: 15px 20px; /* Increased padding */
+    text-align: left;
+  }
+  
+  .result-table th {
+    background-color: #0073e6;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .result-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .result-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  .result-table td {
+    color: #555;
+  }
+  
+  .level-card {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9rem; /* Adjusted font size for level card */
+    font-weight: bold;
+    text-align: center;
+    width: 75px;
+    margin: auto; /* Center align within cell */
+  }
+  
+  /* Level card colors based on level */
+  .level-card.low {
+    background-color: #ff9999; /* Red */
+    color: #fff;
+  }
+  
+  .level-card.medium {
+    background-color: #ffff99; /* Yellow */
+  }
+  
+  .level-card.high {
+    background-color: #99ff99; /* Green */
+  }
+  

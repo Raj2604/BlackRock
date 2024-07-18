@@ -1,0 +1,10 @@
+.youtube-videos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.youtube-video {
+    margin: 0 10px;
+}
